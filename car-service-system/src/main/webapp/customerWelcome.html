@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Customer Welcome</title>
+<link rel="stylesheet" href="Style.css">
+<style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(to bottom right, #22728A, #C2D8DA); /* Cool gradient with the specified color */
+        }
+
+        /* Main container styling */
+        .login-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            
+           
+        }
+
+        /* Right section with login options */
+        .login-box .right-panel {
+       background: #CFDDE1;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Welcome Text */
+        .right-panel h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        /* Button Links with Animation */
+        .right-panel a {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            background-color: #2B505C; /* Vibrant button color */
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .right-panel a:hover {
+            background-color: #4FA6BA;
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+        }
+
+        
+
+        /* Background Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+        }
+
+        /* Gear Icon Animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gear-icon {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            opacity: 0.2;
+            animation: spin 20s linear infinite;
+        }
+
+        .gear-icon-2 {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+            opacity: 0.2;
+            animation: spin 15s linear infinite reverse;
+        }
+
+        /* Background Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+        }
+
+        @keyframes spinReverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <!-- Background gear animations for effect -->
+    <img src="timing-belt.png" alt="Gear" class="gear-icon">
+    <img src="timing-belt.png" alt="Gear" class="gear-icon-2">
+   
+    
+
+    <!-- Right Panel with Login Links -->
+    <div class="login-box">
+        <div class="right-panel">
+            <h1>Customer Portal</h1>
+            <a href="customerRegister.html">Register</a>
+            <a href="customerLogin.html">Login</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service System</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Main container styling */
+        .login-box {
+            display: flex;
+            width: 70%;
+            max-width: 800px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        /* Left section with car image and description */
+        .login-box .left-panel {
+            background-color:  #2B505C; /* Dark blue-gray color */
+            color: white;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .left-panel img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .left-panel h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .left-panel p {
+            font-size: 1em;
+            max-width: 250px;
+        }
+
+        /* Right section with login options */
+        .login-box .right-panel {
+            background-color: white;
+            width: 60%;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        /* "Need Help" link in the right corner */
+        .right-panel .help-link {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .right-panel .help-link a {
+            color:  #2B505C;
+            text-decoration: none;
+        }
+
+        .right-panel .help-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Welcome Text */
+        .right-panel h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 1.5em;
+            text-align: center;
+        }
+
+        /* Button Links with Animation */
+        .right-panel a {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            background-color:#2B505C; /* Matching dark blue-gray color */
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .right-panel a:hover {
+            background-color:  #0A5567;
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+        }
+
+        /* Gear Icon Animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gear-icon {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            opacity: 0.2;
+            animation: spin 20s linear infinite;
+        }
+
+        .gear-icon-2 {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+            opacity: 0.2;
+            animation: spin 15s linear infinite reverse;
+        }
+        body {
+            background: linear-gradient(to bottom right, #22728A, #C2D8DA); /* Soft gradient for depth */
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+        }
+
+        /* Background Gear Animations */
+        .gear-icon {
+            /* ... (existing gear animation CSS) ... */
+            animation: spin 15s linear infinite; /* Adjust animation speed */
+        }
+
+        .gear-icon-2 {
+            /* ... (existing gear animation CSS) ... */
+            animation: spinReverse 10s linear infinite; /* Reverse animation */
+        }
+
+        @keyframes spinReverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+    
+
+    
+</head>
+<body>
+<div class="overlay"></div> 
+    <!-- Background gear animations for effect -->
+    <img src="settings.png" alt="Gear" class="gear-icon">
+    <img src="settings.png" alt="Gear" class="gear-icon-2">
+
+    <div class="login-box">
+        <!-- Left Panel with Car Icon and Description -->
+        <div class="left-panel">
+            <img src="car (2).png" alt="Car Icon">
+            <h2>Car Service System</h2>
+            <p>The best service for maintaining and caring for your vehicle.</p>
+        </div>
+        
+        <!-- Right Panel with Login Links -->
+        <div class="right-panel">
+            <h1>Welcome!</h1>
+            <a href="customerWelcome.html">Customer Portal</a>
+            <a href="adminWelcome.html">Admin Portal</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(to bottom right, #3b4a5a, #f9f9f9); /* Soft gradient for depth */
+        }
+
+        /* Main container styling */
+        .login-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #ffffff;
+            padding: 20px;
+        }
+
+        /* Right section with login options */
+        .login-box .right-panel {
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Welcome Text */
+        .right-panel h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        /* Button Links with Animation */
+        .right-panel a {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            background-color: #3b4a5a; /* Matching dark blue-gray color */
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .right-panel a:hover {
+            background-color: #2c3a47;
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+        }
+
+        /* Gear Icon Animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gear-icon {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            opacity: 0.2;
+            animation: spin 20s linear infinite;
+        }
+
+        .gear-icon-2 {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+            opacity: 0.2;
+            animation: spin 15s linear infinite reverse;
+        }
+
+        /* Background Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+        }
+
+        @keyframes spinReverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
